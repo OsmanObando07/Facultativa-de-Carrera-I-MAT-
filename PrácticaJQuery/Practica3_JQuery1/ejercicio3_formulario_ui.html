@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Formulario con jQuery UI</title>
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
+</head>
+<body>
+
+    <h2>Formulario de usuario</h2>
+
+    <form id="formInfo">
+        <label>Nombre:</label><br>
+        <input type="text" id="nombre"><br><br>
+
+        <label>Correo:</label><br>
+        <input type="email" id="correo"><br><br>
+
+        <label>Edad:</label><br>
+        <input type="number" id="edad"><br><br>
+
+        <label>Género:</label><br>
+        <input type="radio" name="genero" value="Masculino"> Masculino<br>
+        <input type="radio" name="genero" value="Femenino"> Femenino<br><br>
+
+        <label>Fecha de nacimiento:</label><br>
+        <input type="date" id="fecha"><br><br>
+
+        <label>Color favorito:</label><br>
+        <input type="color" id="color"><br><br>
+
+        <button type="button" id="mostrarInfo">Mostrar información</button>
+    </form>
+
+    <p id="infoMostrada"></p>
+
+    <script>
+        $('#mostrarInfo').click(function() {
+            const nombre = $('#nombre').val();
+            const correo = $('#correo').val();
+            const edad = $('#edad').val();
+            const genero = $('input[name="genero"]:checked').val();
+            const fecha = $('#fecha').val();
+            const color = $('#color').val();
+
+            let mensaje = `Nombre: ${nombre}<br>
+                           Correo: ${correo}<br>
+                           Edad: ${edad}<br>
+                           Género: ${genero}<br>
+                           Fecha de nacimiento: ${fecha}<br>
+                           Color favorito: ${color}`;
+
+            $('#infoMostrada').html(mensaje);
+        });
+    </script>
+
+</body>
+</html>

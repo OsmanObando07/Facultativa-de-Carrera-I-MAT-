@@ -1,0 +1,33 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+}
+
+.tabla-container {
+    overflow-x: auto;
+    max-width: 100%;
+}
+
+#tabla {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+#tabla th, #tabla td {
+    border: 1px solid #ccc;
+    padding: 8px;
+    text-align: left;
+}
+
+#tabla tbody tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+#tabla tbody tr:nth-child(odd) {
+    background-color: #e8f8f5;
+}
+
+#tabla tbody tr:hover {
+    background-color: #d1f2eb;
+}

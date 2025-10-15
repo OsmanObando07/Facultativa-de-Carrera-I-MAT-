@@ -1,0 +1,44 @@
+/* Estilo para tabla principal */
+.tabla-peliculas {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 30px;
+}
+
+.tabla-peliculas th {
+    background-color: #2c3e50;
+    color: white;
+    padding: 10px;
+    text-align: left;
+}
+
+.tabla-peliculas td {
+    padding: 8px;
+    border: 1px solid #ccc;
+}
+
+/* Estilos alternados */
+.tabla-peliculas tbody tr:nth-child(odd) {
+    background-color: #f2f2f2;
+}
+
+.tabla-peliculas tbody tr:nth-child(even) {
+    background-color: #e0f7fa;
+}
+
+/* Tabla con celdas agrupadas */
+.tabla-grupos {
+    width: 80%;
+    border-collapse: collapse;
+    text-align: center;
+}
+
+.tabla-grupos th, .tabla-grupos td {
+    border: 1px solid #888;
+    padding: 10px;
+}
+
+.tabla-grupos th {
+    background-color: #8e44ad;
+    color: white;
+}

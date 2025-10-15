@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Formulario con jQuery y CSS</title>
+    <link rel="stylesheet" href="estilos.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="script.js" defer></script>
+</head>
+<body>
+
+    <h1>Formulario y tabla con jQuery</h1>
+
+    <!-- BOTONES DE TOGGLE -->
+    <div>
+        <button id="toggle-formulario">Mostrar/Ocultar Formulario</button>
+        <button id="toggle-tabla">Mostrar/Ocultar Tabla</button>
+        <button id="toggle-todo">Mostrar/Ocultar Todo</button>
+    </div><br>
+
+    <!-- FORMULARIO -->
+    <div id="formulario-container">
+        <form id="formulario">
+            <label>Nombre:</label><br>
+            <input type="text" id="nombre"><br><br>
+
+            <label>Apellido:</label><br>
+            <input type="text" id="apellido"><br><br>
+
+            <label>Edad:</label><br>
+            <input type="number" id="edad"><br><br>
+
+            <button type="button" id="guardar">Guardar en tabla</button>
+            <button type="button" id="borrar">Borrar formulario</button>
+        </form>
+    </div>
+
+    <!-- TABLA -->
+    <div id="tabla-container">
+        <table id="tabla">
+            <thead>
+                <tr>
+                    <th>Nombre</th>
+                    <th>Apellido</th>
+                    <th>Edad</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td colspan="3">Sin datos aún</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+</body>
+</html>

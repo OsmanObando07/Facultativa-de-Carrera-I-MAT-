@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Evaluación de Calificación</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+
+    <h2>Evaluar calificación</h2>
+
+    <form id="formCalificacion">
+        <label for="nota">Ingrese su calificación:</label><br>
+        <input type="number" id="nota" step="0.1" min="0" max="10"><br><br>
+        <button type="submit">Evaluar</button>
+    </form>
+
+    <p id="resultado"></p>
+
+    <script>
+        $('#formCalificacion').on('submit', function(event) {
+            event.preventDefault();
+            const nota = parseFloat($('#nota').val());
+            let resultado = "";
+
+            if (nota < 0 || nota > 10 || isNaN(nota)) {
+                resultado = "⚠️ Error: la calificación debe estar entre 0 y 10";
+            } else if (nota < 6) {
+                resultado = "NA";
+            } else if (nota < 7.5) {
+                resultado = "S";
+            } else if (nota < 9) {
+                resultado = "B";
+            } else if (nota < 10) {
+                resultado = "MB";
+            } else {
+                resultado = "LAP";
+            }
+
+            $('#resultado').text("Resultado: " + resultado);
+        });
+    </script>
+
+</body>
+</html>

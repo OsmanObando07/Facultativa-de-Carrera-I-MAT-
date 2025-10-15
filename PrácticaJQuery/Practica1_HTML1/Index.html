@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Mis películas favoritas - Práctica 1</title>
+</head>
+<body>
+    <!-- Encabezados -->
+    <h1>Mis películas favoritas</h1>
+    <h1>Lista de películas</h1>
+
+    <h2>Películas de acción</h2>
+    <h2>Películas de comedia</h2>
+
+    <h3>Películas clásicas</h3>
+    <h3>Películas modernas</h3>
+
+    <h4>Películas de los 80</h4>
+    <h4>Películas del 2000</h4>
+
+    <h5>Películas ganadoras de Oscar</h5>
+    <h5>Películas independientes</h5>
+
+    <h6>Películas para ver en familia</h6>
+    <h6>Películas para maratón</h6>
+
+    <!-- Lista ordenada -->
+    <h2>Top 10 películas ordenadas</h2>
+    <ol>
+        <li>El Padrino</li>
+        <li>Forrest Gump</li>
+        <li>Inception</li>
+        <li>Gladiador</li>
+        <li>Matrix</li>
+        <li>Jurassic Park</li>
+        <li>El Señor de los Anillos</li>
+        <li>Star Wars</li>
+        <li>Titanic</li>
+        <li>Avatar</li>
+    </ol>
+
+    <!-- Lista no ordenada -->
+    <h2>Películas favoritas sin orden</h2>
+    <ul>
+        <li>Interstellar</li>
+        <li>La La Land</li>
+        <li>Joker</li>
+        <li>El Club de la Pelea</li>
+        <li>Mad Max</li>
+        <li>El Gran Hotel Budapest</li>
+        <li>Frozen</li>
+        <li>El Origen</li>
+        <li>Los Increíbles</li>
+        <li>Toy Story</li>
+    </ul>
+
+    <!-- Lista descriptiva -->
+    <h2>Descripción de películas</h2>
+    <dl>
+        <dt>El Padrino</dt>
+        <dd>Drama criminal clásico sobre una familia mafiosa.</dd>
+
+        <dt>Matrix</dt>
+        <dd>Película de ciencia ficción que explora la realidad virtual.</dd>
+
+        <dt>Inception</dt>
+        <dd>Thriller de ciencia ficción sobre sueños y subconsciente.</dd>
+
+        <dt>Gladiador</dt>
+        <dd>Drama histórico sobre un general romano convertido en gladiador.</dd>
+
+        <dt>Forrest Gump</dt>
+        <dd>Historia conmovedora de un hombre con discapacidad intelectual.</dd>
+    </dl>
+
+    <!-- Formulario -->
+    <h2>Formulario de registro</h2>
+    <form action="#" method="post">
+        <label for="nombre">Nombre:</label><br>
+        <input type="text" id="nombre" name="nombre" required><br><br>
+
+        <label for="apellido">Apellido:</label><br>
+        <input type="text" id="apellido" name="apellido" required><br><br>
+
+        <label for="email">Correo electrónico:</label><br>
+        <input type="text" id="email" name="email" required><br><br>
+
+        <label for="password">Contraseña:</label><br>
+        <input type="password" id="password" name="password" required><br><br>
+
+        <label for="edad">Edad:</label><br>
+        <input type="number" id="edad" name="edad" min="0" max="120" required><br><br>
+
+        <label for="fecha">Fecha de nacimiento:</label><br>
+        <input type="date" id="fecha" name="fecha" required><br><br>
+
+        <fieldset>
+            <legend>Géneros favoritos (selección múltiple):</legend>
+            <input type="checkbox" id="accion" name="genero" value="accion">
+            <label for="accion">Acción</label><br>
+
+            <input type="checkbox" id="comedia" name="genero" value="comedia">
+            <label for="comedia">Comedia</label><br>
+
+            <input type="checkbox" id="drama" name="genero" value="drama">
+            <label for="drama">Drama</label><br>
+
+            <input type="checkbox" id="ciencia" name="genero" value="ciencia ficcion">
+            <label for="ciencia">Ciencia ficción</label><br>
+        </fieldset><br>
+
+        <fieldset>
+            <legend>Preferencia de formato (selección única):</legend>
+            <input type="radio" id="dvd" name="formato" value="dvd" required>
+            <label for="dvd">DVD</label><br>
+
+            <input type="radio" id="blu" name="formato" value="blu-ray">
+            <label for="blu">Blu-ray</label><br>
+
+            <input type="radio" id="digital" name="formato" value="digital">
+            <label for="digital">Digital</label><br>
+
+            <input type="radio" id="cine" name="formato" value="cine">
+            <label for="cine">Cine</label><br>
+        </fieldset><br>
+
+        <button type="submit">Enviar</button>
+    </form>
+
+</body>
+</html>

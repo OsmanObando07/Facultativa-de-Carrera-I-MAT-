@@ -1,0 +1,46 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+    background-color: #f9f9f9;
+}
+
+input[type="text"], input[type="number"] {
+    width: 250px;
+    padding: 5px;
+}
+
+input:focus {
+    background-color: #e0f7fa;
+}
+
+button {
+    margin: 5px;
+    padding: 8px 12px;
+    cursor: pointer;
+}
+
+#tabla {
+    margin-top: 20px;
+    border-collapse: collapse;
+    width: 100%;
+    max-width: 600px;
+}
+
+#tabla th, #tabla td {
+    border: 1px solid #ccc;
+    padding: 10px;
+    text-align: left;
+}
+
+#tabla thead {
+    background-color: #00796b;
+    color: white;
+}
+
+#tabla tbody tr:nth-child(even) {
+    background-color: #f1f1f1;
+}
+
+#tabla tbody tr:nth-child(odd) {
+    background-color: #ffffff;
+}

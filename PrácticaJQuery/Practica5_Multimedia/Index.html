@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Elementos Multimedia</title>
+    <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+
+    <h1>Elementos Multimedia en HTML5</h1>
+
+    <h2>🎵 Audio</h2>
+    <audio controls>
+        <source src="media/Audio.mp3" type="audio/mp3">
+        Tu navegador no soporta audio HTML5.
+    </audio>
+
+    <h2>🎬 Video</h2>
+    <video controls width="480">
+        <source src="media/Video.mp4" type="video/mp4">
+        Tu navegador no soporta video HTML5.
+    </video>
+
+    <h2>▶️ Video de YouTube</h2>
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/dQw4w9WgXcQ" 
+        title="YouTube video player" frameborder="0" 
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+        allowfullscreen>
+    </iframe>
+
+    <h2>🐦 Feed de Twitter</h2>
+    <a class="twitter-timeline" data-width="500" data-height="400" href="https://twitter.com/TwitterDev?ref_src=twsrc%5Etfw">
+        Tweets by TwitterDev
+    </a>
+    <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+
+    <h2>📘 Feed de Facebook</h2>
+    <div id="fb-root"></div>
+    <script async defer crossorigin="anonymous" 
+        src="https://www.facebook.com/share=/p/1EYMmbNBtS/">
+    </script>
+
+    <!-- Puedes cambiar este post por uno público diferente -->
+    <div class="fb-post" 
+        data-href="https://www.facebook.com/share/p/1EYMmbNBtS/" 
+        data-width="500">
+    </div>
+
+    <h2>🗺️ Geolocalización con Google Maps</h2>
+    <div class="mapa">
+        <iframe
+            width="600"
+            height="450"
+            style="border:0"
+            loading="lazy"
+            allowfullscreen
+           <script async src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY_HERE&callback=console.debug&libraries=maps,marker&v=beta">
+    </script>
+    <style>
+      /* Always set the map height explicitly to define the size of the div
+       * element that contains the map. */
+      gmp-map {
+        height: 100%;
+      }
+       </style>
+        </iframe>
+    </div>
+
+</body>
+</html>
