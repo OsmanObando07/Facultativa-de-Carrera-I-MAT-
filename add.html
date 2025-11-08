@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>BookShelf — Agregar libro</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <header><h1>Agregar libro</h1><nav><a href="index.html">Inicio</a></nav></header>
+  <main>
+    <form id="addForm">
+      <label>Título <input name="title" required></label>
+      <label>Autor <input name="author" required></label>
+      <label>Categoría <input name="category" required></label>
+      <label>Año <input name="year" type="number" min="0"></label>
+      <label>URL portada <input name="cover" type="url"></label>
+      <label>Descripción <textarea name="description"></textarea></label>
+      <button type="submit">Guardar</button>
+    </form>
+    <div id="msg"></div>
+  </main>
+  <script src="js/storage.js"></script>
+  <script>
+    const form = document.getElementById('addForm');
+    form.addEventListener('submit', e => {
+      e.preventDefault();
+      const fd = new FormData(form);
+      const book = {
+        id: 'bk_' + Date.now(),
+        title: fd.get('title').trim(),
+        author: fd.get('author').trim(),
+        category: fd.get('category').trim(),
+        year: parseInt(fd.get('year')) || null,
+        description: fd.get('description').trim(),
+        cover: fd.get('cover').trim() || 'https://via.placeholder.com/120x160?text=No+Cover',
+        favorite: false,
+        createdAt: Date.now()
+      };
+      addBook(book);
+      document.getElementById('msg').textContent = 'Libro guardado ✅';
+      form.reset();
+    });
+  </script>
+</body>
+</html>

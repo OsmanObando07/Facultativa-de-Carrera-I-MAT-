@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>BookShelf — Inicio</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <h1>📚 BookShelf</h1>
+    <nav>
+      <a href="index.html">Inicio</a>
+      <a href="add.html">Agregar</a>
+      <a href="contact.html">Contacto</a>
+      <a href="about.html">Acerca</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="controls">
+      <input id="searchInput" placeholder="Buscar por título o autor..." aria-label="Buscar libros">
+      <select id="categoryFilter" aria-label="Filtrar por categoría">
+        <option value="">Todas las categorías</option>
+        <option>Ficción</option>
+        <option>No ficción</option>
+        <option>Tecnología</option>
+        <option>Autoayuda</option>
+      </select>
+      <label><input type="checkbox" id="favFilter"> Solo favoritos</label>
+    </section>
+
+    <section id="booksList" class="books-list" aria-live="polite">
+      <!-- tarjetas se inyectan aquí -->
+    </section>
+  </main>
+
+  <template id="bookCardTemplate">
+    <article class="card">
+      <img class="cover" alt="">
+      <div class="card-body">
+        <h3 class="title"></h3>
+        <p class="author"></p>
+        <div class="card-actions">
+          <button class="viewBtn">Ver</button>
+          <button class="favBtn" aria-pressed="false">☆</button>
+          <button class="delBtn">Eliminar</button>
+        </div>
+      </div>
+    </article>
+  </template>
+
+  <script src="js/storage.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>
