@@ -1,0 +1,15 @@
+:root{ --bg:#f7f7fb; --card:#fff; --accent:#4b7bec; --text:#222; --muted:#666; }
+*{box-sizing:border-box;font-family:Inter, system-ui, sans-serif}
+body{margin:0;background:var(--bg);color:var(--text);line-height:1.4}
+.site-header{display:flex;align-items:center;justify-content:space-between;padding:1rem;background:var(--card);box-shadow:0 1px 4px rgba(0,0,0,.06)}
+.site-header h1{margin:0;font-size:1.25rem}
+nav a{margin-left:0.75rem;text-decoration:none;color:var(--accent)}
+.controls{display:flex;gap:.5rem;padding:1rem;flex-wrap:wrap;align-items:center}
+.controls input, .controls select{padding:.5rem;border-radius:6px;border:1px solid #ddd}
+.books-list{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:1rem;padding:1rem}
+.card{background:var(--card);padding:.75rem;border-radius:10px;box-shadow:0 2px 6px rgba(0,0,0,.05);display:flex;gap:.75rem}
+.cover{width:80px;height:110px;object-fit:cover;border-radius:6px}
+.card-body{flex:1}
+.card-actions{display:flex;gap:.5rem;margin-top:.5rem}
+.card-actions button{padding:.35rem .6rem;border-radius:6px;border:1px solid #ddd;background:#fff;cursor:pointer}
+@media(max-width:600px){ .controls{flex-direction:column;align-items:stretch} }
